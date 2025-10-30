@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiPortafolio.</title>
+    <link rel="stylesheet" href="estilo.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="barra-navegacion">
+        <div class="contenedor">
+            <a href="#inicio" class="logo-navegacion">MiPortafolio.</a>
+            <ul class="menu-navegacion">
+                <li><a href="#inicio" class="enlace-navegacion">Inicio</a></li>
+                <li><a href="#sobre-mi" class="enlace-navegacion">Sobre mí</a></li>
+                <li><a href="#portafolio" class="enlace-navegacion">Portafolio</a></li>
+                <li><a href="#habilidades" class="enlace-navegacion">Habilidades</a></li>
+                <li><a href="#contacto" class="enlace-navegacion">Contacto</a></li>
+            </ul>
+            <div class="menu-hamburguesa">
+                <span class="barra"></span>
+                <span class="barra"></span>
+                <span class="barra"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="encabezado">
+        <div class="contenedor seccion-principal">
+            <div class="texto-principal">
+                <h1>Hola, soy Richard Moreira Giler</h1>
+                <p class="subtitulo">Desarrollador Web Full Stack</p>
+                <p class="descripcion">
+                    Apasionado por crear soluciones web modernas y eficientes. Bienvenido a mi portafolio.
+                </p>
+                <div class="redes-principal">
+                    <a href="https://github.com/rmgiler" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/rmgiler" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="#portafolio" class="btn-primario">Ver mis proyectos</a>
+            </div>
+            <div class="imagen-principal">
+                <img src="archivos/fotodepresentacion.jpg" alt="foto-de-presentacion">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre-mi" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Sobre Mí</h2>
+                <div class="contenido-sobre-mi">
+                    <p>
+                        Soy un desarrollador de software con 30 años de experiencia, especializado en
+                        JavaScript, React y Node.js. Mi objetivo es construir aplicaciones escalables
+                        y con una excelente experiencia de usuario.
+                    </p>
+                    <p>
+                        Mi filosofía de trabajo se fundamenta en la búsqueda constante de la mejora y 
+                        la innovación, entendidas como pilares esenciales para alcanzar la excelencia 
+                        profesional y personal. Creo firmemente en el poder de la evolución continua, 
+                        tanto en los procesos como en las ideas, y me comprometo a cuestionar lo
+                        establecido, explorar nuevas perspectivas y perfeccionar cada detalle con
+                        rigor y creatividad. Mi enfoque está orientado a generar soluciones eficientes, sostenibles y con impacto real, que respondan a las necesidades del entorno y
+                        contribuyan al crecimiento colectivo.
+                    </p>
+                    <a href="archivos/CV.pdf" download class="btn-secundario">Descargar CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="portafolio" class="seccion fondo-claro">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Portafolio de Proyectos</h2>
+                <div class="grilla-portafolio">
+                    
+                    <div class="tarjeta-portafolio">
+                        <img src="archivos/proyecto1.jpg" alt="Imagen del Proyecto 1">
+                        <div class="info-portafolio">
+                            <h3>Proyecto 1: E-commerce</h3>
+                            <p>Plataforma de comercio electrónico desarrollada con JavaScript.</p>
+                            <div class="enlaces-portafolio">
+                                <a href="#" target="_blank">Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-portafolio">
+                        <img src="archivos/proyecto2.jpg" alt="Imagen del Proyecto 2">
+                        <div class="info-portafolio">
+                            <h3>Proyecto 2: Blog Personal</h3>
+                            <p>Blog desarrollado con Next.js, HTML5 y CSS3.</p>
+                            <div class="enlaces-portafolio">
+                                <a href="#" target="_blank">Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-portafolio">
+                        <img src="archivos/proyecto3.jpg" alt="Imagen del Proyecto 3">
+                        <div class="info-portafolio">
+                            <h3>Proyecto 3: App del Clima</h3>
+                            <p>Aplicación web que consume una API externa para mostrar el clima.</p>
+                            <div class="enlaces-portafolio">
+                                <a href="#" target="_blank">Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Habilidades Técnicas</h2>
+                <div class="grilla-habilidades">
+                    <div class="categoria-habilidad">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li><i class="fab fa-html5"></i> HTML5</li>
+                            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                            <li><i class="fab fa-js"></i> JavaScript</li>
+                            <li><i class="fab fa-react"></i> React</li>
+                            <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="categoria-habilidad">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li><i class="fab fa-node-js"></i> Node.js</li>
+                            <li><i class="fas fa-database"></i> Express</li>
+                            <li><i class="fas fa-database"></i> MongoDB</li>
+                            <li><i class="fas fa-database"></i> SQL</li>
+                        </ul>
+                    </div>
+                    <div class="categoria-habilidad">
+                        <h3>Otras Herramientas</h3>
+                        <ul>
+                            <li><i class="fab fa-git-alt"></i> Git</li>
+                            <li><i class="fab fa-github"></i> GitHub</li>
+                            <li><i class="fab fa-figma"></i> Figma</li>
+                            <li><i class="fas fa-terminal"></i> Terminal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion fondo-claro">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Contacto</h2>
+                <p class="subtitulo-seccion">
+                    ¿Interesado en colaborar? Envíame un mensaje.
+                </p>
+                <div class="contenido-contacto">
+                    <form id="formulario-contacto" action="https://formspree.io/f/TU_ENDPOINT_AQUI" method="POST" class="formulario-contacto">
+                        <div class="grupo-formulario">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="grupo-formulario">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primario">Enviar Mensaje</button>
+                    </form>
+                    <div class="info-contacto">
+                        <h3>Información Adicional</h3>
+                        <p><i class="fas fa-envelope"></i> richardmg@utm.edu.ec</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Portoviejo, Manabí, Ecuador</p>
+                        <div class="redes-contacto">
+                            <a href="https://github.com/rmgiler" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/rmgiler" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>&copy; 2025 Richard Moreira Giler. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
