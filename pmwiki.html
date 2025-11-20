@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PmWiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezadoSitio">
+        <div class="logoEncabezado">
+            <a href="index.html"><img src="http://www.pmichaud.com/img/wiki/pmichaud.com-40.gif" alt="Logo"></a>
+        </div>
+    </header>
+
+    <div class="contenedorPrincipal">
+        <aside class="barraLateral">
+            <div class="botonMenu" onclick="alternarMenu()">☰ MENÚ</div>
+            <nav>
+                <ul id="listaMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Pm</a></li>
+                    <li><a href="pmwiki.html" class="activo">PmWiki</a></li>
+                    <li><a href="career.html">Professional Career</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="contenidoSitio">
+            <p style="color: #888; margin-bottom: 10px;">PmWiki / <strong>PmWiki</strong></p>
+            
+            <h1>Pm Wiki</h1>
+
+            <p>PmWiki is a wiki-based content-management system (CMS) for collaborative creation and maintenance of websites.</p>
+
+            <p>PmWiki pages look and act like normal web pages, except they have an "Edit" link that makes it easy to modify existing pages. You do not need to know or use any HTML or CSS.</p>
+
+            <h2>Key PmWiki Features</h2>
+            
+            <p><strong>Custom look-and-feel:</strong> A site administrator can quickly change the appearance using skins.</p>
+            
+            <p><strong>Access control:</strong> PmWiki password protection can be applied to an entire site or groups of pages.</p>
+            
+            <p><strong>Customization:</strong> One principle is to only include essential features in the core engine, but make it easy to customize.</p>
+
+            <p>PmWiki is written in PHP and distributed under the General Public License. It is designed to be simple to install and customize. This site is running pmwiki-2.2.107.</p>
+
+            <div class="cajaCita">
+                PmWiki is a registered trademark of Patrick R. Michaud. Since January 2009 PmWiki is actively maintained by Petko Yotov.
+            </div>
+        </main>
+    </div>
+
+    <footer class="piePagina">
+        <p>Page last modified on February 03, 2013</p>
+        <p><a href="#">Edit Page</a> | <a href="#">Page History</a> | <a href="#">Printable View</a></p>
+    </footer>
+
+    <script>
+        function alternarMenu() {
+            document.getElementById("listaMenu").classList.toggle("abierto");
+        }
+    </script>
+
+</body>
+</html>

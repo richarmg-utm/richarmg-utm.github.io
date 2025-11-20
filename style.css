@@ -1,0 +1,271 @@
+/* =========================================
+   1. FUENTES E IMPORTACIONES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+/* =========================================
+   2. ESTILOS GENERALES (RESET)
+   ========================================= */
+* {
+    boxSizing: border-box; /* Nota: En CSS las propiedades llevan guion, pero los selectores NO los usaremos */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #444;
+    background-color: #f4f7f6;
+}
+
+a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #6c5ce7;
+}
+
+/* =========================================
+   3. ENCABEZADO (HEADER)
+   ========================================= */
+.encabezadoSitio {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logoEncabezado img {
+    height: 45px;
+    width: auto;
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+/* =========================================
+   4. CONTENEDOR PRINCIPAL (GRID)
+   ========================================= */
+.contenedorPrincipal {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   5. BARRA LATERAL (SIDEBAR)
+   ========================================= */
+.barraLateral {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+/* Botón Menú (Oculto en PC) */
+.botonMenu {
+    display: none; 
+    background: #2d3436;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+.barraLateral ul {
+    list-style: none;
+}
+
+.barraLateral li {
+    margin-bottom: 5px;
+}
+
+.barraLateral a {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #555;
+    border-left: 4px solid transparent;
+}
+
+.barraLateral a:hover {
+    background-color: #f8f9fa;
+    color: #6c5ce7;
+    transform: translateX(5px);
+}
+
+/* Estado Activo */
+.barraLateral a.activo {
+    background-color: #eef2ff;
+    color: #6c5ce7;
+    border-left: 4px solid #6c5ce7;
+}
+
+/* =========================================
+   6. CONTENIDO DEL SITIO
+   ========================================= */
+.contenidoSitio {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contenidoSitio h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.2rem;
+    color: #2d3436;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #6c5ce7;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contenidoSitio h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    color: #2d3436;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.contenidoSitio ul {
+    margin-left: 20px;
+}
+
+.contenidoSitio li {
+    margin-bottom: 8px;
+}
+
+/* Citas */
+.cajaCita {
+    background: linear-gradient(to right, #f8f9fa, #fff);
+    padding: 20px 30px;
+    margin: 30px 0;
+    border-left: 5px solid #6c5ce7;
+    font-style: italic;
+    color: #555;
+    border-radius: 0 10px 10px 0;
+}
+
+.sangriaTexto {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-style: normal;
+    color: #333;
+}
+
+/* =========================================
+   7. IMÁGENES
+   ========================================= */
+.imgIzquierda, .imgDerecha {
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imgIzquierda:hover, .imgDerecha:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.imgIzquierda {
+    float: left;
+    margin: 0 25px 15px 0;
+    max-width: 160px;
+}
+
+.imgDerecha {
+    float: right;
+    margin: 0 0 15px 25px;
+    max-width: 180px;
+}
+
+.limpiarFlotados::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* =========================================
+   8. PIE DE PÁGINA (FOOTER)
+   ========================================= */
+.piePagina {
+    background-color: #2d3436;
+    color: #b2bec3;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+.piePagina a {
+    color: #74b9ff;
+    font-weight: bold;
+}
+
+/* =========================================
+   9. RESPONSIVE (MÓVIL)
+   ========================================= */
+@media (max-width: 768px) {
+    .contenedorPrincipal {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .barraLateral {
+        order: -1;
+        padding: 15px;
+    }
+
+    .botonMenu {
+        display: block;
+    }
+
+    .barraLateral ul {
+        display: none; 
+    }
+
+    /* Clase 'abierto' agregada por JS */
+    .barraLateral ul.abierto {
+        display: block;
+        animation: deslizarAbajo 0.4s ease;
+    }
+
+    @keyframes deslizarAbajo {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .imgIzquierda, .imgDerecha {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+    
+    .contenidoSitio {
+        padding: 25px;
+    }
+}

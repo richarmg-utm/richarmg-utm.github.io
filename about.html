@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Pm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezadoSitio">
+        <div class="logoEncabezado">
+            <a href="index.html"><img src="http://www.pmichaud.com/img/wiki/pmichaud.com-40.gif" alt="Logo"></a>
+        </div>
+    </header>
+
+    <div class="contenedorPrincipal">
+        <aside class="barraLateral">
+            <div class="botonMenu" onclick="alternarMenu()">☰ MENÚ</div>
+            <nav>
+                <ul id="listaMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="activo">About Pm</a></li>
+                    <li><a href="pmwiki.html">PmWiki</a></li>
+                    <li><a href="career.html">Professional Career</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="contenidoSitio limpiarFlotados">
+            <p style="color: #888; margin-bottom: 10px;">Pm / <strong>About Pm</strong></p>
+            
+            <h1>About Pm</h1>
+
+            <img src="http://www.pmichaud.com/img/wiki/pmichaud.jpg" alt="Patrick Michaud" class="imgIzquierda">
+
+            <p><strong>Pm</strong> (written just like that) is the nickname of Dr. Patrick Michaud.</p>
+            
+            <p>Dr. Michaud is a software developer and consultant focused on open source development and applications, including Perl, PmWiki, and Linux. He is frequent presenter at Perl and other open source conferences around the world.</p>
+            
+            <p>On the Internet, Patrick is best known as the author of <a href="pmwiki.html">PmWiki</a> and the lead developer for <a href="#">Rakudo Perl 6</a>. He is also known for <a href="#">Strawberry Pop-Tart Blowtorches</a> and <a href="#">Fun With Grapes</a>, which he wrote in the summer of 1994 to evaluate the web as a communications medium.</p>
+            
+            <p>He holds a Ph.D. in Computer Science from the University of Southwestern Louisiana.</p>
+            
+            <p>Patrick was formerly a Professor of Computer Science at <a href="#">Texas A&M University-Corpus Christi</a>.</p>
+        </main>
+    </div>
+
+    <footer class="piePagina">
+        <p>Page last modified on April 26, 2011</p>
+        <p><a href="#">Edit Page</a> | <a href="#">Page History</a> | <a href="#">Printable View</a></p>
+    </footer>
+
+    <script>
+        function alternarMenu() {
+            document.getElementById("listaMenu").classList.toggle("abierto");
+        }
+    </script>
+
+</body>
+</html>

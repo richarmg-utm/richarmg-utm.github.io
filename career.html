@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Career</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezadoSitio">
+        <div class="logoEncabezado">
+            <a href="index.html"><img src="http://www.pmichaud.com/img/wiki/pmichaud.com-40.gif" alt="Logo"></a>
+        </div>
+    </header>
+
+    <div class="contenedorPrincipal">
+        <aside class="barraLateral">
+            <div class="botonMenu" onclick="alternarMenu()">☰ MENÚ</div>
+            <nav>
+                <ul id="listaMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Pm</a></li>
+                    <li><a href="pmwiki.html">PmWiki</a></li>
+                    <li><a href="career.html" class="activo">Professional Career</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="contenidoSitio limpiarFlotados">
+            <p style="color: #888; margin-bottom: 10px;">Pm / <strong>Professional Career</strong></p>
+            
+            <h1>Professional Career</h1>
+
+            <img src="http://www.pmichaud.com/2004/pm-2.jpg" alt="Patrick Working" class="imgDerecha">
+
+            <p>My great passion is in bringing people and technology together, both by designing and building systems that make technology usable, and by communicating with people.</p>
+
+            <ul>
+                <li>Resume (<a href="#">PDF</a>, 103K)</li>
+                <li>Full Curriculum Vitae (<a href="#">PDF</a>, 130K)</li>
+            </ul>
+
+            <p><a href="pmwiki.html">PmWiki</a>, the software running this site, is an example of such a system. Most of the systems I have built over my career in computing have focused on the application of technology to making people's lives better.</p>
+
+            <p>I've been programming professionally for over thirty years, and for fourteen years was a faculty member at Texas A&M University-Corpus Christi.</p>
+
+            <p>I have extensive experience in software development and project management, especially in projects making extensive use of open-source tools. From 2004 to 2014 I was the lead developer for the <a href="#">Rakudo Perl 6 compiler</a>.</p>
+        </main>
+    </div>
+
+    <footer class="piePagina">
+        <p>Page last modified on June 03, 2020</p>
+        <p><a href="#">Edit Page</a> | <a href="#">Page History</a> | <a href="#">Printable View</a></p>
+    </footer>
+
+    <script>
+        function alternarMenu() {
+            document.getElementById("listaMenu").classList.toggle("abierto");
+        }
+    </script>
+
+</body>
+</html>

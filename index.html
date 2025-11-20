@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pm - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezadoSitio">
+        <div class="logoEncabezado">
+            <a href="index.html"><img src="http://www.pmichaud.com/img/wiki/pmichaud.com-40.gif" alt="Logo"></a>
+        </div>
+    </header>
+
+    <div class="contenedorPrincipal">
+        <aside class="barraLateral">
+            <div class="botonMenu" onclick="alternarMenu()">
+                ☰ MENÚ
+            </div>
+            
+            <nav>
+                <ul id="listaMenu">
+                    <li><a href="index.html" class="activo">Home</a></li>
+                    <li><a href="about.html">About Pm</a></li>
+                    <li><a href="pmwiki.html">PmWiki</a></li>
+                    <li><a href="career.html">Professional Career</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="contenidoSitio">
+            <h1>Patrick Michaud (Pm)</h1>
+            
+            <div class="cajaCita">
+                "True greatness is measured by how much freedom you give to others, not by how much you can coerce others to do what you want."
+                <span class="sangriaTexto">--Larry Wall, Creator of Perl</span>
+            </div>
+
+            <h2>About Pm:</h2>
+            <ul>
+                <li><a href="about.html">About Pm</a></li>
+                <li><a href="career.html">Professional Career</a></li>
+                <li><a href="#">Core Values</a></li>
+            </ul>
+
+            <h2>Projects:</h2>
+            <ul>
+                <li><a href="#">Rakudo Perl 6</a></li>
+                <li><a href="#">Perl 6</a></li>
+                <li><a href="pmwiki.html">PmWiki</a></li>
+                <li><a href="#">NQP</a></li>
+                <li><a href="#">Parrot</a></li>
+            </ul>
+
+            <h2>Writings and journals:</h2>
+            <ul>
+                <li><a href="#">Pmthium</a></li>
+                <li><a href="#">use.perl journal</a></li>
+                <li><a href="#">Strawberry Pop-Tart Blow Torches</a></li>
+            </ul>
+
+            <h2>Online profiles:</h2>
+            <ul>
+                <li><a href="#">Google Profile</a></li>
+                <li><a href="#">LinkedIn profile</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+        </main>
+    </div>
+
+    <footer class="piePagina">
+        <p>Page last modified on June 28, 2011</p>
+        <p><a href="#">Edit Page</a> | <a href="#">Page History</a> | <a href="#">Printable View</a></p>
+    </footer>
+
+    <script>
+        function alternarMenu() {
+            var menu = document.getElementById("listaMenu");
+            /* toggle añade o quita la clase 'abierto' */
+            menu.classList.toggle("abierto");
+        }
+    </script>
+
+</body>
+</html>
