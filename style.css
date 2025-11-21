@@ -1,13 +1,7 @@
-/* =========================================
-   1. FUENTES E IMPORTACIONES
-   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Slab:wght@400;700&display=swap');
 
-/* =========================================
-   2. ESTILOS GENERALES (RESET)
-   ========================================= */
 * {
-    boxSizing: border-box; /* Nota: En CSS las propiedades llevan guion, pero los selectores NO los usaremos */
+    boxSizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -30,9 +24,6 @@ a:hover {
     color: #6c5ce7;
 }
 
-/* =========================================
-   3. ENCABEZADO (HEADER)
-   ========================================= */
 .encabezadoSitio {
     background-color: #fff;
     padding: 15px 0;
@@ -50,9 +41,6 @@ a:hover {
     margin: 0 auto 5px auto;
 }
 
-/* =========================================
-   4. CONTENEDOR PRINCIPAL (GRID)
-   ========================================= */
 .contenedorPrincipal {
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -62,9 +50,6 @@ a:hover {
     padding: 0 20px;
 }
 
-/* =========================================
-   5. BARRA LATERAL (SIDEBAR)
-   ========================================= */
 .barraLateral {
     background-color: #fff;
     padding: 25px;
@@ -73,7 +58,6 @@ a:hover {
     height: fit-content;
 }
 
-/* Botón Menú (Oculto en PC) */
 .botonMenu {
     display: none; 
     background: #2d3436;
@@ -110,16 +94,12 @@ a:hover {
     transform: translateX(5px);
 }
 
-/* Estado Activo */
 .barraLateral a.activo {
     background-color: #eef2ff;
     color: #6c5ce7;
     border-left: 4px solid #6c5ce7;
 }
 
-/* =========================================
-   6. CONTENIDO DEL SITIO
-   ========================================= */
 .contenidoSitio {
     background-color: #fff;
     padding: 40px;
@@ -153,7 +133,6 @@ a:hover {
     margin-bottom: 8px;
 }
 
-/* Citas */
 .cajaCita {
     background: linear-gradient(to right, #f8f9fa, #fff);
     padding: 20px 30px;
@@ -172,9 +151,6 @@ a:hover {
     color: #333;
 }
 
-/* =========================================
-   7. IMÁGENES
-   ========================================= */
 .imgIzquierda, .imgDerecha {
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -204,9 +180,6 @@ a:hover {
     display: table;
 }
 
-/* =========================================
-   8. PIE DE PÁGINA (FOOTER)
-   ========================================= */
 .piePagina {
     background-color: #2d3436;
     color: #b2bec3;
@@ -221,9 +194,6 @@ a:hover {
     font-weight: bold;
 }
 
-/* =========================================
-   9. RESPONSIVE (MÓVIL)
-   ========================================= */
 @media (max-width: 768px) {
     .contenedorPrincipal {
         grid-template-columns: 1fr;
@@ -245,7 +215,6 @@ a:hover {
         display: none; 
     }
 
-    /* Clase 'abierto' agregada por JS */
     .barraLateral ul.abierto {
         display: block;
         animation: deslizarAbajo 0.4s ease;
