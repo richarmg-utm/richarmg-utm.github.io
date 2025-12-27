@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-primario: #1e5631;
+    --color-primario-hover: #163f24;
+    --color-primario-claro: #2a7043;
+    --color-fondo: #f5f5f5;
+    --color-blanco: #ffffff;
+    --color-texto-principal: #2c3e50;
+    --color-texto-secundario: #64748b;
+    --color-borde: #e2e8f0;
+    --color-error: #dc2626;
+    --color-error-fondo: #fee2e2;
+    --color-exito: #16a34a;
+    --color-sombra: rgba(0, 0, 0, 0.1);
+    --color-sombra-hover: rgba(0, 0, 0, 0.15);
+    --radio-borde: 8px;
+    --radio-borde-grande: 12px;
+    --transicion-rapida: 0.2s ease;
+    --transicion-normal: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ocultar iconos nativos de contraseña en Edge/IE */
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+/* Ocultar iconos nativos en Webkit si existen */
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+
+.contenedor-principal {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.tarjeta-login {
+    background: var(--color-blanco);
+    border-radius: var(--radio-borde-grande);
+    box-shadow: 0 10px 40px var(--color-sombra);
+    padding: 48px 40px;
+    width: 100%;
+    transition: transform var(--transicion-normal), box-shadow var(--transicion-normal);
+}
+
+.tarjeta-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px var(--color-sombra-hover);
+}
+
+.encabezado-login {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo-institucional {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    margin-bottom: 0;
+    object-fit: contain;
+}
+
+.titulo-sistema {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-texto-principal);
+    letter-spacing: -0.5px;
+    margin: 0;
+    line-height: 1;
+}
+
+.texto-online {
+    font-weight: 400;
+    color: var(--color-texto-secundario);
+}
+
+.formulario-acceso {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.etiqueta-campo {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-texto-principal);
+    margin-bottom: 4px;
+}
+
+.entrada-texto {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--color-texto-principal);
+    background: var(--color-blanco);
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    transition: all var(--transicion-rapida);
+    outline: none;
+}
+
+.entrada-texto::placeholder {
+    color: var(--color-texto-secundario);
+    opacity: 0.6;
+}
+
+.entrada-texto:hover {
+    border-color: #cbd5e1;
+}
+
+.entrada-texto:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(30, 86, 49, 0.1);
+}
+
+.contenedor-contrasena {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.entrada-contrasena {
+    padding-right: 48px;
+}
+
+.boton-mostrar-contrasena {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-texto-secundario);
+    transition: color var(--transicion-rapida);
+    border-radius: 4px;
+}
+
+.boton-mostrar-contrasena:hover {
+    color: var(--color-primario);
+    background: rgba(30, 86, 49, 0.05);
+}
+
+.boton-mostrar-contrasena:focus {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
+}
+
+.icono-ojo,
+.icono-ojo-cerrado {
+    display: block;
+}
+
+.mensaje-ayuda {
+    font-size: 13px;
+    color: var(--color-texto-secundario);
+    margin-top: 4px;
+}
+
+.mensaje-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    background: var(--color-error-fondo);
+    border: 1px solid var(--color-error);
+    border-radius: var(--radio-borde);
+    color: var(--color-error);
+    font-size: 14px;
+    font-weight: 500;
+    animation: deslizarAbajo 0.3s ease;
+}
+
+@keyframes deslizarAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.icono-error {
+    flex-shrink: 0;
+}
+
+.aviso-mayusculas {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #b45309;
+    /* Color naranja sutil */
+    background: #fffbeb;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-top: 8px;
+    border: 1px solid #fef3c7;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.boton-acceder {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    color: var(--color-blanco);
+    background: var(--color-primario);
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    transition: all var(--transicion-rapida);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+    box-shadow: 0 4px 12px rgba(30, 86, 49, 0.2);
+}
+
+.boton-acceder:hover {
+    background: var(--color-primario-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(30, 86, 49, 0.3);
+}
+
+.boton-acceder:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(30, 86, 49, 0.2);
+}
+
+.boton-acceder:focus {
+    outline: 3px solid rgba(30, 86, 49, 0.3);
+    outline-offset: 2px;
+}
+
+.boton-acceder:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.icono-cargando {
+    animation: rotar 1s linear infinite;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.enlace-recuperar {
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-primario);
+    text-decoration: none;
+    transition: all var(--transicion-rapida);
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    outline: none;
+    /* Asegura que no haya marco al dar foco */
+}
+
+.pie-formulario {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-borde);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.selector-idioma {
+    flex: 1;
+    min-width: 200px;
+}
+
+.campo-idioma {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--color-texto-secundario);
+    background: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    transition: all var(--transicion-rapida);
+}
+
+.campo-idioma:hover {
+    border-color: #cbd5e1;
+}
+
+.campo-idioma:focus {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
+    border-color: var(--color-primario);
+}
+
+.boton-cookies {
+    padding: 10px 16px;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--color-texto-secundario);
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    transition: all var(--transicion-rapida);
+    white-space: nowrap;
+}
+
+.boton-cookies:hover {
+    background: #e2e8f0;
+    color: var(--color-texto-principal);
+}
+
+.boton-cookies:focus {
+    outline: 2px solid var(--color-primario);
+    outline-offset: 2px;
+}
+
+.oculto {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    .contenedor-principal {
+        padding: 16px;
+    }
+
+    .tarjeta-login {
+        padding: 32px 24px;
+    }
+
+    .titulo-sistema {
+        font-size: 28px;
+    }
+
+    .pie-formulario {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .selector-idioma {
+        min-width: 100%;
+    }
+
+    .boton-cookies {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

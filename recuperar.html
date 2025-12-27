@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recuperación de contraseña - UTM Online">
+    <title>UTM Online - Recuperar Contraseña</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="imagenes/icono-utm.ico" type="image/x-icon">
+    <style>
+        .codigo-seguridad {
+            background: #f1f5f9;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 5px;
+            color: var(--color-primario);
+            user-select: none;
+            border: 2px dashed var(--color-borde);
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .instruccion-codigo {
+            font-size: 13px;
+            color: var(--color-texto-secundario);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .boton-regresar {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: var(--color-texto-secundario);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .boton-regresar:hover {
+            color: var(--color-primario);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="contenedor-principal">
+        <div class="tarjeta-login">
+            <div class="encabezado-login">
+                <img src="imagenes/logo-utm.png" alt="Logo UTM" class="logo-institucional" id="logo-utm">
+            </div>
+
+            <form class="formulario-acceso" id="formulario-recuperar">
+                <div class="grupo-campo">
+                    <input type="text" id="campo-cedula" class="entrada-texto" placeholder="Ingrese su número de cédula"
+                        required maxlength="10">
+                </div>
+
+                <div class="grupo-campo">
+                    <div id="contenedor-keywords" class="codigo-seguridad" title="Click para regenerar">
+                        <!-- Se genera por JS -->
+                    </div>
+                    <p class="instruccion-codigo" id="texto-codigo">Haga clic en el código para generar uno nuevo</p>
+                    <input type="text" id="campo-keywords" class="entrada-texto"
+                        placeholder="Ingrese el código generado" required>
+                </div>
+
+                <div class="mensaje-error oculto" id="mensaje-error" role="alert">
+                    <svg class="icono-error" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <span id="texto-error">Error al procesar la solicitud.</span>
+                </div>
+
+                <button type="submit" class="boton-acceder" id="boton-enviar">
+                    <span class="texto-boton">Enviar solicitud</span>
+                </button>
+
+                <a href="index.html" class="boton-regresar" id="enlace-regresar">Volver al inicio de sesión</a>
+            </form>
+
+            <footer class="pie-formulario">
+                <div class="selector-idioma">
+                    <select id="selector-idioma" class="campo-idioma">
+                        <option value="es">Español - Internacional (es)</option>
+                        <option value="en">English - International (en)</option>
+                    </select>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script src="recuperar.js"></script>
+</body>
+
+</html>
